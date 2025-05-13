@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ali’s Multi-Layered Learning Tracker</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
+    h1, h2, h3 { margin-top: 1.5em; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1em; }
+    table, th, td { border: 1px solid #ccc; }
+    th, td { padding: 8px; text-align: left; }
+    th { background-color: #f4f4f4; }
+    ul { margin-top: 0.5em; }
+    code { background: #f9f2f4; padding: 2px 4px; border-radius: 4px; }
+    .template-note { background-color: #eef; padding: 10px; border-left: 4px solid #99c; margin-bottom: 1em; }
+  </style>
+</head>
+<body>
+
+  <h1>📊 Ali’s Multi-Layered Learning Tracker</h1>
+  <div class="template-note">
+    <strong>Template ini bisa dipakai di Notion atau aplikasi lain yang mendukung HTML embed.</strong>
+  </div>
+
+  <h2>1. 🏠 Master Dashboard</h2>
+  <p><strong>Judul Page:</strong> Ali’s Learning Dashboard</p>
+  <p><strong>Sections:</strong></p>
+  <ul>
+    <li><code>Progress Summary</code> (perhitungan persentase progress tiap skill)</li>
+    <li><code>Quick Links</code> ke sub-pages: Daily, Weekly, Monthly, Milestones</li>
+    <li><code>Calendar View</code> embed kalender (dengan database Daily Tracker)</li>
+  </ul>
+
+  <h2>2. 📅 Daily Tracker</h2>
+  <p><strong>Database:</strong> Table</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Tanggal</th>
+        <th>Task</th>
+        <th>Subtasks</th>
+        <th>Target (jam)</th>
+        <th>Actual (jam)</th>
+        <th>Status</th>
+        <th>Notes</th>
+        <th>Resource</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2025-05-15</td>
+        <td>TED Talk Listening + Vocab</td>
+        <td>Note 5 kata baru</td>
+        <td>1.0</td>
+        <td>1.2</td>
+        <td>⏳ Proses</td>
+        <td>Paham 70%</td>
+        <td>YouTube, Grammarly</td>
+      </tr>
+      <tr>
+        <td>2025-05-15</td>
+        <td>Build Contact Book CLI</td>
+        <td>Input, List, Dict, Fungsi</td>
+        <td>1.5</td>
+        <td>1.5</td>
+        <td>✔️ Selesai</td>
+        <td>Butuh add fitur cari</td>
+        <td>Automate the Boring Stuff</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="template-note">
+    <strong>Tips:</strong> Buat <em>database</em> baru di Notion → pilih <code>Table</code>, lalu tambahkan properti: Date, Title, Multi-select, Number, Select, Text, dan URL.
+  </div>
+
+  <h2>3. 📈 Weekly Goals</h2>
+  <p><strong>Database:</strong> Board (Kanban)</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Week Of</th>
+        <th>Goal</th>
+        <th>Subgoals</th>
+        <th>Status</th>
+        <th>Review Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2025-05-11</td>
+        <td>Python: OOP Implementation</td>
+        <td>Budget App, Tests, Refactor</td>
+        <td>In Progress</td>
+        <td>Class OK, tests pending</td>
+      </tr>
+      <tr>
+        <td>2025-05-11</td>
+        <td>English: B1 → B2 Listening Boost</td>
+        <td>TED Talks, Podcast, Shadowing</td>
+        <td>Not Started</td>
+        <td>Planning resources</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="template-note">
+    Buat <code>Board</code> di Notion → group by <code>Status</code> (Not Started, In Progress, Completed)
+    <br>Tambahkan <strong>Template Button</strong> <code>New Weekly Goal</code> untuk automate Week Of & Status default.
+  </div>
+
+  <h2>4. 🗓️ Monthly Plan</h2>
+  <p><strong>Database:</strong> Table + Calendar</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Bulan</th>
+        <th>Focus</th>
+        <th>Key Deliverables</th>
+        <th>Status</th>
+        <th>Reflection</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>May</td>
+        <td>Listening & Speaking</td>
+        <td>Mock TOEFL Test, 5 TED Summaries, Italki×4</td>
+        <td>In Progress</td>
+        <td>Summary OK, must improve fluency</td>
+      </tr>
+      <tr>
+        <td>Jun</td>
+        <td>Python: Data Structures & Files</td>
+        <td>Contact App, Budget App, CSV Parser</td>
+        <td>Not Started</td>
+        <td>Belum dimulai</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="template-note">
+    Di Notion, buat <code>Table</code> (atau <code>Calendar</code>), tambahkan properti: Select, Text, Multi-select, Select, Text, dan Template Button.
+  </div>
+
+  <h2>5. 🎯 Milestones</h2>
+  <p><strong>Database:</strong> Timeline View</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Milestone Date</th>
+        <th>Milestone</th>
+        <th>Description</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2025-08-14</td>
+        <td>English B2 Achieved</td>
+        <td>Listening 80%, Writing 500+ kata, Speaking club×8</td>
+        <td>Not Started</td>
+      </tr>
+      <tr>
+        <td>2025-08-14</td>
+        <td>PCEP Certified</td>
+        <td>Lulus ujian PCEP, upload sertifikat ke LinkedIn</td>
+        <td>Not Started</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="template-note">
+    Buat <code>Timeline</code> database di Notion, tambahkan Template Button <code>New Milestone</code>.
+  </div>
+
+  <h2>6. 🔗 Resource Library</h2>
+  <p><strong>Database:</strong> Table (atau Gallery)</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Skill</th>
+        <th>Type</th>
+        <th>Link/Location</th>
+        <th>Used</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Automate the Boring Stuff (book)</td>
+        <td>Python</td>
+        <td>Book</td>
+        <td>Chapter 4–6</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td>BBC Learning English: 6 Min</td>
+        <td>English</td>
+        <td>Podcast</td>
+        <td>https://www.bbc.co.uk/learningenglish/</td>
+        <td>No</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="template-note">
+    Tambahkan relasi (Relation) ke Daily/Weekly Tracker untuk referensi kajian.
+  </div>
+
+  <h3>⚙️ Cara Deploy di Notion</h3>
+  <ol>
+    <li>Buat page baru → pilih “Import” → “Markdown” atau copy-paste HTML ke block “Embed”.</li>
+    <li>Untuk setiap section, buat sub-page dengan database sesuai tabel di atas.</li>
+    <li>Paste HTML di embed, dan sesuaikan view (Calendar, Board, Timeline).</li>
+    <li>Tambahkan Template Buttons pada masing-masing database jika perlu.</li>
+  </ol>
+  <p>Template ini siap jalan dan detail! Semoga mempermudah tracking harian, mingguan, bulanan, dan milestone lo, bro! 🚀</p>
+
+</body>
+</html>
